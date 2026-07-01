@@ -1,95 +1,149 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>时政一点通</title>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>时政一点通,时事政治热点新闻汇总</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Meta tags -->
+    <meta name="keywords" content="时事政治,考研政治,时事政治汇总,中考,高考,时事政治试题及答案,时政热点,时事新闻,时事政治app,事业单位考试,公务员考试">
+    <meta name="description" content="时政一点通(www.szydt.cn)是时事政治考试网，提供时政热点、试题及备考资料，助力公务员、事业单位等考试。时事政治试题及答案,时事政治汇总资料,时事政治必考题深受中考、考研、国家公务员、事业编考生和考试研究部门的信任与好评，是时政考试的必备资料!">
+    <!-- Open Graph -->
+    <meta property="og:title" content="时政一点通,时事政治热点新闻汇总">
+    <meta property="og:type" content="WebSite">
+    <meta property="og:url" content="https://www.szydt.cn/">
+    <meta property="og:image" content="https://apps.qtimg.com/assets/brand/873423b4a82f8e62.png">
+    <meta property="og:description" content="时政一点通(www.szydt.cn)是时事政治考试网，提供时政热点、试题及备考资料，助力公务员、事业单位等考试。时事政治试题及答案,时事政治汇总资料,时事政治必考题深受中考、考研、国家公务员、事业编考生和考试研究部门的信任与好评，是时政考试的必备资料!">
+    <meta property="og:site_name" content="时政一点通,时事政治热点新闻汇总">
     <link href="https://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://apps.bdimg.com/libs/fontawesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        html, body {
-            height: 100%;
-            background: #fff;
-            font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        }
-        .wrapper {
-            display: table;
-            width: 100%;
-            height: 100%;
-        }
-        .main-content {
-            display: table-cell;
-            vertical-align: middle;
-            text-align: center;
-        }
-        .icon-wrap {
-            margin-bottom: 30px;
-        }
-        .icon-wrap .fa {
-            color: #bbb;
-        }
-        .title {
-            font-size: 28px;
-            font-weight: 300;
-            color: #333;
-            letter-spacing: 2px;
-            margin-bottom: 16px;
-        }
-        .desc {
-            font-size: 15px;
-            color: #999;
-            line-height: 1.8;
-            margin-bottom: 0;
-        }
-        .divider {
-            width: 60px;
-            height: 1px;
-            background: #ddd;
-            margin: 24px auto;
-        }
-        .footer-icp {
-            position: absolute;
-            bottom: 24px;
-            left: 0;
-            width: 100%;
-            text-align: center;
-            font-size: 13px;
-            color: #bbb;
-        }
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-        a:link, a:visited, a:hover, a:active {
-            color: inherit;
-        }
-    </style>
+    <script src="https://apps.alyjs.com/traffic/0cc82c04873423b4a82f8e6225f6e02d.js"></script>
+  <style>
+    * { margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body { background: #fff; font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif; color: #333; }
+
+    /* 主布局 */
+    .wrap { min-height: 100%; display: flex; flex-direction: column; }
+    .main { flex: 1 0 auto; }
+
+    /* Hero */
+    .hero { padding: 80px 0 60px; text-align: center; }
+    .hero .app-icon { width: 96px; height: 96px; border-radius: 22px; background: linear-gradient(135deg, #e53e3e, #3182ce); margin: 0 auto 28px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 36px rgba(229,62,62,.25), 0 2px 8px rgba(49,130,206,.2); }
+    .hero .app-icon .fa { font-size: 48px; color: #fff; }
+    .hero h1 { font-size: 32px; font-weight: 300; letter-spacing: 2px; margin-bottom: 10px; color: #222; }
+    .hero h1 strong { font-weight: 700; background: linear-gradient(135deg, #e53e3e, #3182ce); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero .subtitle { font-size: 16px; color: #888; font-weight: 300; margin-bottom: 38px; }
+
+    /* 下载按钮 */
+    .btn-dl { display: inline-block; padding: 14px 44px; border-radius: 50px; font-size: 17px; font-weight: 500; letter-spacing: 1px; text-decoration: none; transition: all .3s; margin: 0 10px 16px; }
+    .btn-dl:hover { text-decoration: none; transform: translateY(-2px); }
+    .btn-ios { color: #fff; background: linear-gradient(135deg, #e53e3e, #c53030); box-shadow: 0 6px 20px rgba(229,62,62,.35); }
+    .btn-ios:hover { color: #fff; box-shadow: 0 10px 28px rgba(229,62,62,.5); }
+    .btn-android { color: #fff; background: linear-gradient(135deg, #3182ce, #2b6cb0); box-shadow: 0 6px 20px rgba(49,130,206,.35); }
+    .btn-android:hover { color: #fff; box-shadow: 0 10px 28px rgba(49,130,206,.5); }
+    .btn-dl .fa { margin-right: 6px; }
+
+    .qr-box { margin-top: 32px; }
+    .qr-box img { width: 130px; height: 130px; border: 1px solid #eee; border-radius: 12px; padding: 6px; background: #fff; }
+    .qr-box p { margin-top: 8px; font-size: 13px; color: #aaa; }
+
+    /* 特色 */
+    .features { padding: 60px 0 50px; text-align: center; }
+    .section-title { font-size: 22px; font-weight: 300; letter-spacing: 2px; margin-bottom: 46px; color: #666; }
+    .section-title span { font-weight: 700; background: linear-gradient(135deg, #e53e3e, #3182ce); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .feat-item { margin-bottom: 36px; }
+    .feat-icon { width: 70px; height: 70px; border-radius: 20px; margin: 0 auto 18px; line-height: 70px; font-size: 30px; color: #fff; }
+    .feat-icon.c1 { background: linear-gradient(135deg, #fc8181, #e53e3e); }
+    .feat-icon.c2 { background: linear-gradient(135deg, #e53e3e, #805ad5); }
+    .feat-icon.c3 { background: linear-gradient(135deg, #63b3ed, #3182ce); }
+    .feat-icon.c4 { background: linear-gradient(135deg, #3182ce, #805ad5); }
+    .feat-item h4 { font-size: 16px; font-weight: 600; margin-bottom: 6px; color: #333; }
+    .feat-item p { font-size: 13px; color: #999; line-height: 1.7; }
+
+    /* Footer */
+    .footer { padding: 24px 0; text-align: center; flex-shrink: 0; border-top: 1px solid #f0f0f0; }
+    .footer p { font-size: 12px; color: #bbb; margin: 0; }
+    .footer a { color: #bbb; }
+    .footer a:hover { color: #3182ce; text-decoration: none; }
+
+    /* 响应式 */
+    @media (max-width: 768px) {
+      .hero { padding: 50px 0 40px; }
+      .hero h1 { font-size: 24px; }
+      .hero .subtitle { font-size: 14px; }
+      .btn-dl { padding: 12px 32px; font-size: 15px; margin: 0 6px 12px; }
+      .features { padding: 40px 0 30px; }
+    }
+  </style>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="main-content">
-            <div class="container">
-                <h1 class="title"> szydt.cn </h1>
-                <p class="desc">
-                    网站正在维护，预计 07.18日 恢复访问
-                </p>
-                <div class="divider"></div>
-                <p class="desc" style="font-size:13px;color:#bbb;">
-                    We apologize for the inconvenience.<br>
-                    The website is temporarily offline for maintenance.
-                </p>
+<div class="wrap">
+  <div class="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="app-icon"><i class="fa fa-newspaper-o"></i></div>
+        <h1><strong>公考宝典</strong> · 掌上题库</h1>
+        <p class="subtitle">时政新闻速览 + 海量题库练习，助你高效上岸备考</p>
+        <div>
+          <a href="#" class="btn-dl btn-ios"><i class="fa fa-apple"></i> App Store 下载</a>
+          <a href="#" class="btn-dl btn-android"><i class="fa fa-android"></i> Android 下载</a>
+        </div>
+        <!--<div class="qr-box">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='130' height='130'%3E%3Crect fill='%23f8f9fa' width='130' height='130' rx='8'/%3E%3Ctext fill='%23ccc' font-size='11' font-family='sans-serif' text-anchor='middle' x='65' y='68'%3E扫码下载%3C/text%3E%3C/svg%3E" alt="扫码下载">
+          <p>扫码下载 App</p>
+        </div>-->
+      </div>
+    </section>
+    <!-- 特色功能 -->
+    <section class="features">
+      <div class="container">
+        <h2 class="section-title">核心<span>功能</span></h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-3">
+            <div class="feat-item">
+              <div class="feat-icon c1"><i class="fa fa-bolt"></i></div>
+              <h4>实时时政</h4>
+              <p>每日精选时政要闻<br>重要政策第一时间送达</p>
             </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div class="feat-item">
+              <div class="feat-icon c2"><i class="fa fa-list-alt"></i></div>
+              <h4>专项题库</h4>
+              <p>行测·申论·公基全覆盖<br>历年真题+模拟冲刺</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div class="feat-item">
+              <div class="feat-icon c3"><i class="fa fa-bar-chart"></i></div>
+              <h4>智能分析</h4>
+              <p>错题归纳·薄弱知识点定位<br>精准提升学习效率</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div class="feat-item">
+              <div class="feat-icon c4"><i class="fa fa-comments-o"></i></div>
+              <h4>社区互动</h4>
+              <p>万人备考社区<br>分享经验·互相答疑</p>
+            </div>
+          </div>
         </div>
-        <div class="footer-icp">
-            <span><a href="//beian.miit.gov.cn">京ICP备04000001号-3</a></span>
-        </div>
+      </div>
+    </section>
+  </div>
+  <!-- 底部 -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 <a href="//www.szydt.cn">时政一点通</a>. All Rights Reserved &nbsp;|&nbsp; <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备04000001号-5</a></p>
     </div>
-    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </footer>
+</div>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </body>
 </html>
